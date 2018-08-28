@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- METADATA -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Psymbiosys</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- STYLES -->
+    <!-- <link rel="icon" src=""> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles.css" />
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
+</head>
+<body>  
+    <!-- FACEBOOK JAVASCRIPT SDK -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: whitesmoke">
+               
+        <!-- BRAND -->       
+        <a class="navbar-brand" href="../index.html">
+            <!-- ICON -->
+            <i class="fas fa-tint"></i>
+            <!-- TITLE -->
+            Dropshipper
+        </a>
+
+        <!-- COLLAPSE MENU (MOBILE) TOGGLER -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- COLLAPSE MENU WRAPPER -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <!-- CONTAINER -->
+            <div class="navbar-nav ml-auto">                                
+
+                <!-- PRODUCTS -->
+                <div>
+                    <a class="btn btn-sm btn-outline-light navbarItem" href="./products.html">Products</a>
+                </div>
+               
+                <!-- DROPDOWN -->
+                <div class="dropdown">
+
+                    <!-- TITLE -->                   
+                    <button class="btn btn-sm btn-outline-light navbarItem" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Other Stuff <span> <i class="fas fa-angle-double-down"></i></span>
+                    </button>
+
+                    <!-- MENU -->
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <!-- ITEMS -->
+                        <button class="dropdown-item" href="#">Item A</a>
+                        <button class="dropdown-item" href="#">Item B</a>
+                        <button class="dropdown-item" href="#">Item C</a>
+                        <button class="dropdown-item" href="#">Item D</a>
+                       
+                    </div>
+                </div>
+
+                <!-- Login -->
+                <div>
+                    <a class="btn btn-sm btn-outline-light navbarItem" href="./login.html">Login</a>
+                </div>
+
+                <!-- SHOPPING CART --> 
+                <a id="cart" class="btn btn-outline-secondary btn-sm btn-block" href="./cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                </a>
+                
+            </div>            
+        </div>
+    </nav>
+
+    <!-- SOCIAL MEDIA FOLLOW BUTTONS -->
+    <div id="socialBtnBar">
+
+        <!-- FACEBOOK (https://developers.facebook.com/docs/plugins/like-button/#) -->
+        
+    
+        <!-- TWITTER (https://publish.twitter.com/#) -->                   
+        
+    </div>
+
+    <!-- HOME PAGE CONTAINERS -->
+    <div id="homePageContainer" class="container">
+        
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>        
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+body {
+    background: rgb(40, 40, 40);
+    background-size: cover;
+    background-repeat: no-repeat;    
+}
+
+.navbar {
+    padding: 10px 8%;
+}
+
+.navbar-brand {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.navbarItem {
+    padding: 0;
+    margin: 5px 10px;
+    border-color: transparent;
+    color: black;
+    background-color: transparent;
+    font-family: 'Libre Baskerville', serif;
+    text-decoration: none;
+}
+
+#cart {
+    margin: 0 10px;
+    border-color: black;
+    color: black;
+    background-color: transparent;
+}
+
+#socialBtnBar {
+    margin-right: 8%;
+    padding: 0 10px;
+    padding-top: 15px;
+    float: right;
+}
+
+#homePageContainer {
+    padding: 20px 8%;
+}
+
+#featProductImage {
+    margin-bottom: 25px;
+}
+
+#psymJumbo {
+    padding: 0;
+    background: transparent;
+    color: whitesmoke;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+/* .dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+} */
+
+/* .dropdown-submenu.pull-left {
+    float: none;
+} */
+
+/* .dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+} */
