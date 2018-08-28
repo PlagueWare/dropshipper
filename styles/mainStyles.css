@@ -43,9 +43,11 @@ body {
 }
 
 #cart {
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0 10px;
-    border-color: black;
-    color: black;
+    border-color: limegreen;
+    color: limegreen;
     background-color: transparent;
 }
 
