@@ -1,0 +1,30 @@
+.row {
+    margin: 0;
+}
+
+#loginBackground {
+    margin: 0;
+    margin-top: 100px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 50px 0;;
+    background-color: rgba(255, 255, 255, 0.035);
+    border-radius: 5px;
+}
+
+#login {
+    color: whitesmoke;
+    text-align: center;
+    max-width: 66%;
+}
+
+#loginBtn {
+    background-color: rgb(92,184,92);
+    border: 0;
+}
+
+#loginForm {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -1,7 +1,12 @@
 body {
-    background: rgb(40, 40, 40);
-    background-size: cover;
-    background-repeat: no-repeat;    
+    background: rgba(45,45,45,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(45,45,45,1) 0%, rgba(30,30,30,1) 93%, rgba(30,30,30,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(45,45,45,1)), color-stop(93%, rgba(30,30,30,1)), color-stop(100%, rgba(30,30,30,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(45,45,45,1) 0%, rgba(30,30,30,1) 93%, rgba(30,30,30,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(45,45,45,1) 0%, rgba(30,30,30,1) 93%, rgba(30,30,30,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(45,45,45,1) 0%, rgba(30,30,30,1) 93%, rgba(30,30,30,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(45,45,45,1) 0%, rgba(30,30,30,1) 93%, rgba(30,30,30,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2d2d', endColorstr='#1e1e1e', GradientType=1 );
 }
 
 .navbar {
@@ -60,8 +65,8 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 10px;
-    border-color: limegreen;
-    color: limegreen;
+    border-color: rgb(92,184,92);
+    color: rgb(92,184,92);
     background-color: transparent;
 }
 
@@ -74,4 +79,5 @@ body {
 
 #bodyContainer {
     padding: 20px 8%;
+    margin-top: 75px;
 }
