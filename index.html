@@ -27,7 +27,7 @@
     }(document, 'script', 'facebook-jssdk'));</script>
     
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: whitesmoke">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: whitesmoke">
                
         <!-- BRAND -->       
         <a class="navbar-brand" href="./index.html">
@@ -88,46 +88,55 @@
     </nav>
 
     <!-- SOCIAL MEDIA FOLLOW BUTTONS -->
-    <div id="socialBtnBar">
+    <!-- <div id="socialBtnBar">
     
-        <!-- FACEBOOK (https://developers.facebook.com/docs/plugins/like-button/#) -->
+        FACEBOOK (https://developers.facebook.com/docs/plugins/like-button/#)
             
         
-        <!-- TWITTER (https://publish.twitter.com/#) -->                   
+        TWITTER (https://publish.twitter.com/#)                   
             
-    </div>
+    </div> -->
 
-    <!-- BODY CONTAINER -->
-    <div id="bodyContainer" class="container-fluid">
+    <!-- HOME CONTAINER -->
+    <div id="homeContainer" class="container-fluid">
         
         <!-- ROW -->
         <div class="row">
 
-            <!-- SPACER -->
-            <div class="col"></div>
-
             <!-- COLUMN -->
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <!-- FEATURED IMAGE -->
-                <img id="featProductImage" class="img-fluid rounded mx-auto d-block" src="./img/Box.jpg">
-            </div>
-            
-            <!-- SPACER -->
-            <div class="col"></div>
+            <div class="col-lg-6 col-sm-6">
 
-            <!-- COLUMN -->
-            <div class="col-lg-5 col-md-5">                
-                <!-- JUMBOTRON -->
-                <div id="psymJumbo" class="jumbotron">
-                    <h1 class="display-4">Featured Product</h1>
-                    <hr class="my-4">
-                    <p>This is information about the featured product.</p>
-                    <a class="btn btn-success btn-lg" href="#" role="button">Learn more</a>
+                <!-- ROW -->
+                <div class="row">
+
+                    <!-- COLUMN -->
+                    <div class="col-lg-9 mx-auto">
+
+                        <!-- FEATURED IMAGE -->
+                        <img id="featProductImage" class="img-fluid rounded mx-auto d-block" src="./img/Box.jpg">
+                    </div>
                 </div>
             </div>
 
-            <!-- SPACER -->
-            <div class="col"></div>
+            <!-- COLUMN -->
+            <div class="col-lg-6 col-sm-6">
+                
+                <!-- ROW -->
+                <div class="row">
+
+                    <!-- COLUMN -->
+                    <div class="col-lg-10 mx-auto">
+
+                        <!-- JUMBOTRON FEATURED PRODUCT -->
+                        <div id="psymJumbo" class="jumbotron">
+                            <h1 class="display-4">Featured Product</h1>
+                            <hr class="my-4">
+                            <p>This is information about the featured product.</p>
+                            <a class="btn btn-success btn-lg" href="#" role="button">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
