@@ -1,15 +1,7 @@
 #productsContainer {
     padding: 0 8%;
     padding-top: 30px;
-    margin-top: 37px;
-}
-
-#filterBar {
-    padding: 0 8%;
-    height: 30px;
-    width: 100%;
-    background-color: rgb(245, 245, 245);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    margin-top: 67px;
 }
 
 .productCard {
