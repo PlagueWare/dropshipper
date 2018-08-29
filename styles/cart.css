@@ -1,0 +1,42 @@
+body {
+    background: white;
+}
+
+#cartContainer {
+    margin: 0 8%;
+    padding-top: 30px;
+    margin-top: 67px;
+}
+
+#cart {
+    margin: 30px 0;
+}
+
+#cartHeader {
+    background-color: lightgrey;
+}
+
+#CartHeaderItems {
+    float: left;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-size: 1.25em;
+}
+
+#CartHeaderQuantity {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-size: 1.25em;
+}
+
+#CartHeaderSubtotal {
+    float: right;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-size: 1.25em;
+}
+
+.cartItemImage {
+    width: 100px;
+    float: left;
+}

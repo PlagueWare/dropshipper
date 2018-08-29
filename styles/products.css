@@ -1,7 +1,22 @@
 #productsContainer {
-    padding: 0 8%;
+    margin: 0 8%;
     padding-top: 30px;
     margin-top: 67px;
+}
+
+#filters {
+    margin-bottom: 30px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+#categoryLink {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+}
+
+#categoryLink:hover {
+    color: darkgray;
+    text-decoration: none;
 }
 
 .productCard {
