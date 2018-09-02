@@ -18,6 +18,10 @@
     text-decoration: none;
 }
 
+#filterDisplay {
+    color: whitesmoke;
+}
+
 .productCard {
     margin-bottom: 30px;
 }
