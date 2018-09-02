@@ -97,31 +97,27 @@
             
     </div> -->
 
-    <!-- LOGIN CONTAINER -->
+    <!-- SIGN UP CONTAINER -->
     <div class="row">
         <div class="col-lg-6 col-md-6 col-md-10 mx-auto">
-            <!-- LOGIN PAGE BACKGROUND CONTAINER -->
+            <!-- SIGN UP PAGE BACKGROUND CONTAINER -->
             <div id="loginBackground" class="container mx-auto">
-                <!-- LOGIN FORM -->
+                <!-- SIGN UP FORM -->
                 <form id="login" class="form-signin mx-auto">
                     <!-- HEADER -->
-                    <h2 class="form-signin-heading">Log In</h2>
+                    <h2 class="form-signin-heading">Sign Up</h2>
+                    <!-- USERNAME -->
+                    <label for="inputUsername" class="sr-only">Username</label>
+                    <input id="loginForm" type="username" id="inputUsername" class="form-control d-block" placeholder="Username" required autofocus>
                     <!-- EMAIL -->
-                    <label for="inputEmail" class="sr-only">Email / Username</label>
-                    <input id="loginForm" type="email" id="inputEmail" class="form-control d-block" placeholder="Email / Username" required autofocus>
+                    <label for="inputEmail" class="sr-only">Email</label>
+                    <input id="loginForm" type="email" id="inputEmail" class="form-control d-block" placeholder="Email" required autofocus>
                     <!-- PASSWORD -->
                     <label for="inputPassword" class="sr-only">Password</label>
                     <input id="loginForm" type="password" id="inputPassword" class="form-control d-block" placeholder="Password" required>
-                    <!-- REMEMBER ME CHECKBOX-->
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Remember me
-                        </label>
-                    </div>
-                    <!-- LOG IN BUTTON -->
-                    <button class="btn btn-lsm btn-block greenBtn" type="submit">Log In</button>
                     <!-- SIGN UP BUTTON -->
-                    <a class="btn btn-block blueBtn" href="./signup.html" role="button">Sign up</a>
+                    <button class="btn btn-lsm btn-block blueBtn" type="submit">Sign up</button>
+                    <a class="btn btn-sm" href="./login.html">Back to Log In</a>
                 </form> 
             </div>
         </div>
