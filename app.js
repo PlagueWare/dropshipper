@@ -1,10 +1,13 @@
+// INCLUDE EXPRESS
 var express = require("express");
+// EXECUTE EXPRESS
 var app = express();
-
+// SERVE PUBLIC FOLDER
 app.use(express.static("public"));
-
+// ASSUME EJS FILE EXTENSION
 app.set("view engine", "ejs");
 
+// ROUTES
 app.get("/", function (req, res) {
     res.render("home");
 });
@@ -38,6 +41,7 @@ app.get("*", function (req, res) {
     res.render("notFound");
 })
 
+// LISTEN
 app.listen(3000, "localhost", function () {
     console.log("Express server started on localhost:3000");
 });
