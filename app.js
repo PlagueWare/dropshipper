@@ -2,6 +2,10 @@
 var express = require("express");
 // EXECUTE EXPRESS
 var app = express();
+// INCLUDE BODY PARSER
+var bodyParser = require("body-parser");
+// USE BODY PARSER
+app.use(bodyParser.urlencoded({extended: true}));
 // SERVE PUBLIC FOLDER
 app.use(express.static("public"));
 // ASSUME EJS FILE EXTENSION
