@@ -1,0 +1,50 @@
+<!-- HEADER -->
+<% include partials/header %>
+
+<!-- BODY CONTAINER -->
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-md-10 mx-auto">
+        <!-- BACKGROUND CONTAINER -->
+        <div id="loginBackground" class="container mx-auto">
+            <form id="login" class="form-signin mx-auto" name="new_form">
+                <!-- HEADER -->
+                <div class="form-group">
+                    <h2 class="form-signin-heading">Sign Up</h2>
+                </div>
+                <!-- NAME -->
+                <div class="form-group">
+                    <label class="sr-only" for="textField">Name</label>
+                    <input type="text" class="form-control" id="textField" placeholder="Name">
+                </div>
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label class="sr-only" for="emailField">Email</label>
+                    <input type="email" class="form-control" id="emailField" placeholder="Email">
+                </div>
+                <!-- PHONE NUMBER -->
+                <div class="form-group">
+                    <label class="sr-only" for="telephoneField">Telephone</label>
+                    <input type="tel" id="telephoneField" class="form-control" placeholder="Phone Number">
+                </div>
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label class="sr-only" for="passwordField">Password</label>
+                    <input type="password" class="form-control" id="passwordField" placeholder="Enter Password">
+                </div>
+                <!-- CONFIRM PASSWORD -->
+                <div class="form-group">
+                    <label class="sr-only" for="passwordField">Confirm Password</label>
+                    <input type="password" class="form-control" id="passwordField" placeholder="Confirm Password">
+                </div>
+                <!-- SIGN UP BUTTON -->
+                <div class="form-group">
+                    <button class="btn btn-lsm btn-block blueBtn" type="submit">Sign up</button>
+                    <a class="btn btn-sm" href="./login.html">Back to Log In</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<% include partials/footer %>

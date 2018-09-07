@@ -1,0 +1,26 @@
+{
+  "name": "dropshipper",
+  "version": "1.0.0",
+  "description": "ecommerce platform",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlagueWare/dropshipper.git"
+  },
+  "keywords": [
+    "ecommerce"
+  ],
+  "author": "Robert Ware",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PlagueWare/dropshipper/issues"
+  },
+  "homepage": "https://github.com/PlagueWare/dropshipper#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}
