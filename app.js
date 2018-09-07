@@ -6,6 +6,8 @@ var app = express();
 var bodyParser = require("body-parser");
 // USE BODY PARSER
 app.use(bodyParser.urlencoded({extended: true}));
+// USE REQUEST
+var request = require("request");
 // SERVE PUBLIC FOLDER
 app.use(express.static("public"));
 // ASSUME EJS FILE EXTENSION
@@ -21,7 +23,26 @@ app.get("/featuredProduct", function (req, res) {
 });
 
 app.get("/products", function (req, res) {
+    var products = [
+        {"name": "A Test", "price": "$100.00", "image": "images/placeholder.png"},
+        {"name": "B Test", "price": "$100.00", "image": "images/placeholder.png"},
+        {"name": "C Test", "price": "$100.00", "image": "images/placeholder.png"},
+        {"name": "D Test", "price": "$100.00", "image": "images/placeholder.png"},
+        {"name": "E Test", "price": "$100.00", "image": "images/placeholder.png"},
+        {"name": "F Test", "price": "$100.00", "image": "images/placeholder.png"},
+        {"name": "G Test", "price": "$100.00", "image": "images/placeholder.png"},
+        {"name": "H Test", "price": "$100.00", "image": "images/placeholder.png"},       
+    ]
+    res.render("products", {products:products});
+});
+
+app.post("/products", function (req, res) {
     res.render("products");
+});
+
+app.get("/products/filter/:searchTerm", function (req, res) {
+    var searchTerm = req.body.params("searchTerm");
+    res.render("products", {products:products});
 });
 
 app.get("/products/:productID", function (req, res) {

@@ -23,126 +23,40 @@
             </div>
         </div>
     </div>
+
     <!-- PRODUCTS COLUMN -->
     <div class="col-lg-9 col-sm-10 mx-auto">
+
         <!-- FILTER DISPLAY ROW -->
         <div class="row">
             <div class="col">
                 <h5 id="filterDisplay">All Products</h5>
             </div>
         </div>
+
         <!-- PRODUCT CARDS ROW -->
         <div class="row">
-            <!-- COLUMN -->
-            <div class="col-lg-3 col-md-6">
-                <!-- PRODUCT CARD -->
-                <div class="card productCard hvr-float" style="width: 100%;">
-                    <!-- IMAGE -->
-                    <img class="card-img-top" src="images/placeholder.png" alt="Card image cap">
-                    <!-- BODY -->
-                    <div class="card-body">
-                        <!-- TITLE -->
-                        <h5 class="card-title">Product Name</h5>
-                        <!-- LINK BUTTON -->
-                        <a href="#" class="btn btn-fluid btn-sm greenBtn d-block">Add to Cart</a>
-                    </div>
+            <% products.forEach(function(product){ %>
+                <!-- COLUMN -->
+                <div class="col-lg-3 col-md-6">
+                    <!-- PRODUCT CARD -->
+                    <div class="card productCard hvr-float">
+                        <!-- IMAGE -->
+                        <img class="card-img-top" src="<%= product.image %>">
+                        <!-- BODY -->
+                        <div class="card-body">
+                            <!-- TITLE -->
+                            <h5 class="card-title"><%= product.name %></h5>
+                            <!-- TITLE -->
+                            <h5 class="card-price"><%= product.price %></h5>
+                        </div>
+                    </div>    
                 </div>
-                <!-- PRODUCT CARD -->
-                <div class="card productCard hvr-float" style="width: 100%;">
-                    <!-- IMAGE -->
-                    <img class="card-img-top" src="images/placeholder.png" alt="Card image cap">
-                    <!-- BODY -->
-                    <div class="card-body">
-                        <!-- TITLE -->
-                        <h5 class="card-title">Product Name</h5>
-                        <!-- LINK BUTTON -->
-                        <a href="#" class="btn btn-fluid btn-sm greenBtn d-block">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-            <!-- COLUMN -->
-            <div class="col-lg-3 col-md-6">
-                <!-- PRODUCT CARD -->
-                <div class="card productCard hvr-float" style="width: 100%;">
-                    <!-- IMAGE -->
-                    <img class="card-img-top" src="images/placeholder.png" alt="Card image cap">
-                    <!-- BODY -->
-                    <div class="card-body">
-                        <!-- TITLE -->
-                        <h5 class="card-title">Product Name</h5>
-                        <!-- LINK BUTTON -->
-                        <a href="#" class="btn btn-fluid btn-sm greenBtn d-block">Add to Cart</a>
-                    </div>
-                </div>
-                <!-- PRODUCT CARD -->
-                <div class="card productCard hvr-float" style="width: 100%;">
-                    <!-- IMAGE -->
-                    <img class="card-img-top" src="images/placeholder.png" alt="Card image cap">
-                    <!-- BODY -->
-                    <div class="card-body">
-                        <!-- TITLE -->
-                        <h5 class="card-title">Product Name</h5>
-                        <!-- LINK BUTTON -->
-                        <a href="#" class="btn btn-fluid btn-sm greenBtn d-block">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-            <!-- COLUMN -->
-            <div class="col-lg-3 col-md-6">
-                <!-- PRODUCT CARD -->
-                <div class="card productCard hvr-float" style="width: 100%;">
-                    <!-- IMAGE -->
-                    <img class="card-img-top" src="images/placeholder.png" alt="Card image cap">
-                    <!-- BODY -->
-                    <div class="card-body">
-                        <!-- TITLE -->
-                        <h5 class="card-title">Product Name</h5>
-                        <!-- LINK BUTTON -->
-                        <a href="#" class="btn btn-fluid btn-sm greenBtn d-block">Add to Cart</a>
-                    </div>
-                </div>
-                <!-- PRODUCT CARD -->
-                <div class="card productCard hvr-float" style="width: 100%;">
-                    <!-- IMAGE -->
-                    <img class="card-img-top" src="images/placeholder.png" alt="Card image cap">
-                    <!-- BODY -->
-                    <div class="card-body">
-                        <!-- TITLE -->
-                        <h5 class="card-title">Product Name</h5>
-                        <!-- LINK BUTTON -->
-                        <a href="#" class="btn btn-fluid btn-sm greenBtn d-block">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-            <!-- COLUMN -->
-            <div class="col-lg-3 col-md-6">
-                <!-- PRODUCT CARD -->
-                <div class="card productCard hvr-float" style="width: 100%;">
-                    <!-- IMAGE -->
-                    <img class="card-img-top" src="images/placeholder.png" alt="Card image cap">
-                    <!-- BODY -->
-                    <div class="card-body">
-                        <!-- TITLE -->
-                        <h5 class="card-title">Product Name</h5>
-                        <!-- LINK BUTTON -->
-                        <a href="#" class="btn btn-fluid btn-sm greenBtn d-block">Add to Cart</a>
-                    </div>
-                </div>
-                <!-- PRODUCT CARD -->
-                <div class="card productCard hvr-float" style="width: 100%;">
-                    <!-- IMAGE -->
-                    <img class="card-img-top" src="images/placeholder.png" alt="Card image cap">
-                    <!-- BODY -->
-                    <div class="card-body">
-                        <!-- TITLE -->
-                        <h5 class="card-title">Product Name</h5>
-                        <!-- LINK BUTTON -->
-                        <a href="#" class="btn btn-fluid btn-sm greenBtn d-block">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
+            <% }); %>
         </div>
     </div>
+
+
 </div>
 
 <!-- FOOTER -->

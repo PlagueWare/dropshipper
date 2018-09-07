@@ -2,10 +2,36 @@
 <% include modules/header %>
 
 <!-- BODY CONTAINER -->
-<div id="productsContainer" class="row">
-    <!-- COLUMN -->
-    <div class="col">
-
+<div id="homeContainer" class="container">
+    <!-- ROW -->
+    <div class="row">
+        <!-- FEATURED PRODUCT IMAGE COLUMN -->
+        <div class="col-lg-6 col-sm-6">
+            <!-- ROW -->
+            <div class="row">
+                <!-- COLUMN -->
+                <div class="col-lg-9 mx-auto">
+                    <!-- FEATURED IMAGE -->
+                    <img id="featProductImage" class="img-fluid rounded mx-auto d-block" src="images/Box.jpg">
+                </div>
+            </div>
+        </div>
+        <!-- FEATURED PRODUCT INFO COLUMN -->
+        <div class="col-lg-6 col-sm-6">
+            <!-- ROW -->
+            <div class="row">
+                <!-- COLUMN -->
+                <div class="col-lg-10 mx-auto">
+                    <!-- JUMBOTRON FEATURED PRODUCT -->
+                    <div id="psymJumbo" class="jumbotron">
+                        <h1 class="display-4">Featured Product</h1>
+                        <hr style="border-color: whitesmoke" class="my-4">
+                        <p>This is information about the featured product.</p>
+                        <a class="btn btn-block greenBtn hvr-grow" href="featuredProduct" role="button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
