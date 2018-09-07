@@ -12,12 +12,17 @@ app.get("/", function (req, res) {
     res.render("home");
 });
 
+app.get("/featuredProduct", function (req, res) {
+    res.render("featuredProduct");
+});
+
 app.get("/products", function (req, res) {
     res.render("products");
 });
 
 app.get("/products/:productID", function (req, res) {
-    res.render("products");
+    var productID = req.params.productID;
+    res.render("product");
 });
 
 app.get("/login", function (req, res) {
