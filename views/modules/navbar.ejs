@@ -1,5 +1,6 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: whitesmoke">
+
     <!-- BRAND -->
     <a class="navbar-brand" href="/">
         <!-- ICON -->
@@ -7,45 +8,51 @@
         <!-- TITLE -->
         Dropshipper
     </a>
+
     <!-- COLLAPSE MENU (MOBILE) TOGGLER -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <!-- COLLAPSE MENU WRAPPER -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- CONTAINER -->
         <div class="navbar-nav ml-auto">
+
             <!-- PRODUCTS -->
             <div>
                 <a class="btn btn-sm btn-outline-light navbarItem" href="/products">Products</a>
             </div>
-            <!-- DROPDOWN -->
-            <div class="dropdown">
 
-                <!-- TITLE -->
+            <!-- DROPDOWN -->
+            <!-- <div class="dropdown">
+
                 <button class="btn btn-sm btn-outline-light navbarItem" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Other Stuff <span> <i class="fas fa-angle-double-down"></i></span>
                 </button>
 
-                <!-- MENU -->
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <!-- ITEMS -->
+                    
                     <button class="dropdown-item" href="#">Item A</a>
-                        <button class="dropdown-item" href="#">Item B</a>
-                            <button class="dropdown-item" href="#">Item C</a>
-                                <button class="dropdown-item" href="#">Item D</a>
+                    <button class="dropdown-item" href="#">Item B</a>
+                    <button class="dropdown-item" href="#">Item C</a>
+                    <button class="dropdown-item" href="#">Item D</a>
 
                 </div>
-            </div>
+
+            </div> -->
+
             <!-- Login -->
             <div>
                 <a class="btn btn-sm btn-outline-light navbarItem" href="/login">Login</a>
             </div>
+
             <!-- SHOPPING CART -->
-            <a id="cartBtn" class="btn btn-outline-secondary btn-sm btn-block" href="/cart">
+            <a id="cartBtn" class="btn btn-sm btn-outline btn-block" href="/cart">
                 <i class="fas fa-shopping-cart"></i>
             </a>
+
         </div>
     </div>
 </nav>

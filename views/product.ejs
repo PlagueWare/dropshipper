@@ -1,39 +1,39 @@
 <!-- HEADER -->
 <% include modules/header %>
 
-<!-- BODY CONTAINER -->
-<div id="homeContainer" class="container">
-    <!-- ROW -->
-    <div class="row">
-        <!-- FEATURED PRODUCT IMAGE COLUMN -->
-        <div class="col-lg-6 col-sm-6">
-            <!-- ROW -->
-            <div class="row">
-                <!-- COLUMN -->
-                <div class="col-lg-9 mx-auto">
-                    <!-- FEATURED IMAGE -->
-                    <img id="featProductImage" class="img-fluid rounded mx-auto d-block" src="images/Box.jpg">
-                </div>
+<!-- MAIN ROW -->
+<div class="row">
+
+    <!-- FEATURED PRODUCT IMAGE COLUMN -->
+    <div class="col-lg-5 col-sm-10 mx-auto">
+        <div class="row">
+            <!-- COLUMN -->
+            <div id="featProductImage" class="col">
+                <!-- FEATURED IMAGE -->
+                <img class="img-fluid rounded dropShadow" src="images/Box.jpg">
             </div>
         </div>
-        <!-- FEATURED PRODUCT INFO COLUMN -->
-        <div class="col-lg-6 col-sm-6">
-            <!-- ROW -->
-            <div class="row">
-                <!-- COLUMN -->
-                <div class="col-lg-10 mx-auto">
-                    <!-- JUMBOTRON FEATURED PRODUCT -->
-                    <div id="psymJumbo" class="jumbotron">
-                        <h1 class="display-4">Featured Product</h1>
-                        <hr style="border-color: whitesmoke" class="my-4">
-                        <p>This is information about the featured product.</p>
-                        <a class="btn btn-block greenBtn hvr-grow" href="featuredProduct" role="button">Learn More</a>
-                    </div>
+    </div>
+
+    <!-- FEATURED PRODUCT INFO COLUMN -->
+    <div class="col-lg-5 col-sm-10 mx-auto">
+        <!-- ROW -->
+        <div class="row">
+            <!-- COLUMN -->
+            <div id="jumbotronColumn" class="col">
+                <!-- JUMBOTRON FEATURED PRODUCT -->
+                <div id="psymJumbo" class="jumbotron">
+                    <h1 class="display-4 textShadow">Product Demo</h1>
+                    <hr style="border-color: whitesmoke" class="my-4 dropShadow">
+                    <p class="textShadow">This is information about the product.</p>
+                    <a class="btn btn-block greenBtn hvr-grow dropShadow" href="featuredProduct">Add to Cart</a>
                 </div>
             </div>
         </div>
     </div>
+    
 </div>
+
 
 <!-- FOOTER -->
 <% include modules/footer %>

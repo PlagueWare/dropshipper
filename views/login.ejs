@@ -1,43 +1,42 @@
 <!-- HEADER -->
 <% include modules/header %>
 
-<!-- BODY CONTAINER -->
-<div class="row">
-    <div class="col-lg-6 col-md-6 col-md-10 mx-auto">
-        <!-- BACKGROUND CONTAINER -->
-        <div id="loginBackground" class="container mx-auto">
-            <form id="login" name="new_form">
-                <!-- HEADER -->
-                <div>
-                    <h2 class="form-signin-heading">Log In</h2>
-                </div>
-                <!-- EMAIL -->
-                <div class="form-group">
-                    <label class="sr-only" for="emailField">Email</label>
-                    <input type="email" class="form-control" id="emailField" placeholder="Email">
-                </div>
-                <!-- PASSWORD -->
-                <div class="form-group">
-                    <label class="sr-only" for="passwordField">Password</label>
-                    <input type="password" class="form-control" id="passwordField" placeholder="Password">
-                </div>
-                <!-- SUBMIT -->
-                <div class="form-group">
-                    <!-- LOG IN BUTTON -->
-                    <button class="btn btn-lsm btn-block greenBtn" type="submit">Log In</button>
-                    <!-- SIGN UP BUTTON -->
-                    <a class="btn btn-block blueBtn" href="/signup">Sign up</a>
-                </div>
-                <!-- REMEMBER ME CHECKBOX-->
-                <div class="checkbox_group_wrap">
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="checkBox" value="option"> Remember Me
-                    </label>
-                </div>
-            </form>
-        </div>
+<!-- LOGIN FORM CONTAINER -->
+<form id="loginBackground" class="container dropShadow mx-auto" action="" method="" name="loginForm">
+
+    <!-- HEADER -->
+    <div class="form-group">
+        <h2>Log In</h2>
     </div>
-</div>
+
+    <!-- EMAIL -->
+    <div class="form-group">
+      <label class="sr-only" for="emailField">Email</label>
+        <input type="email" class="form-control dropShadow" id="emailField" placeholder="Email" required>
+    </div>
+
+    <!-- PASSWORD -->
+    <div class="form-group">
+        <label class="sr-only" for="passwordField">Password</label>
+        <input type="password" class="form-control dropShadow" id="passwordField" placeholder="Password" required>
+    </div>
+
+    <!-- LOG IN BUTTON -->
+    <div class="form-group">
+        <button class="btn btn-md btn-block greenBtn dropShadow" type="submit">Log In</button>
+    </div>
+
+    <!-- SIGN UP BUTTON -->
+    <a class="btn" href="/signup" id="toSignup">Need an account? Sign Up Here!</a>
+
+    <!-- REMEMBER ME CHECKBOX-->
+    <div class="checkbox_group_wrap">
+        <label class="checkbox-inline" id="checkbox">
+            <input type="checkbox" value="option"> Remember Me
+        </label>
+    </div> 
+
+</form>
 
 <!-- FOOTER -->
 <% include modules/footer %>

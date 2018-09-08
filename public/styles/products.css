@@ -1,14 +1,16 @@
-#productsContainer {
-    margin: 0 7%;
-    padding-top: 30px;
+#productsColumn {
+    padding: 0;
 }
 
 #filters {
+    background: whitesmoke;
     margin-bottom: 30px;
     font-family: 'Libre Baskerville', serif;
 }
 
 #categoryLink {
+    padding: 0;
+    margin-bottom: 5px;
     color: rgba(0, 0, 0, 0.8);
     text-decoration: none;
 }
@@ -22,15 +24,21 @@
     color: whitesmoke;
 }
 
-.productCard {
+#productCard {
+    background: whitesmoke;
     margin-bottom: 30px;
 }
 
-.card-title {
-    font-size: 1.25em;
+#cardTitle {
+    color: black;
 }
 
-.card-price {
+#card-title:hover {
+    text-decoration: none;
+}
+
+#cardPrice {
     color: rgb(0, 89, 255);
+    text-decoration: none;
 }
   

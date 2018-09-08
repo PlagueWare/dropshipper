@@ -1,25 +1,33 @@
-.row {
-    margin: 0;
-}
-
 #loginBackground {
-    /* margin: 0; */
-    margin-top: 30px;
-    margin-left: 15%;
-    margin-right: 15%;
+    background-color: darkgrey;
+    color: white;
+    margin: 0 15%;
     padding: 30px 30px;
-    background-color: rgba(255, 255, 255, 0.035);
     border-radius: 5px;
-}
-
-#login {
-    color: whitesmoke;
     text-align: center;
-    max-width: 95%;
+    max-width: 50%;
 }
 
-#loginForm {
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+#toSignup {
+    color: blue;
+    text-decoration: underline;
+}
+
+#toSignup:hover {
+    color: white;
+}
+
+#checkbox {
+    margin: 0;
+    margin-top: 6px;
+}
+
+#backToLogin {
+    padding-bottom: 0;
+    color: blue;
+    text-decoration: underline;
+}
+
+#backToLogin:hover {
+    color: white;
 }

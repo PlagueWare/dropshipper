@@ -1,61 +1,81 @@
 <!-- HEADER -->
 <% include modules/header %>
 
-<!-- BODY CONTAINER -->
-<div id="productsContainer" class="row">
+<!-- MAIN ROW -->
+<div class="row">
+
     <!-- FILTERS COLUMN -->
-    <div id="filters" class="col-lg-3 col-sm-10 mx-auto">
+    <div class="col-lg-3 col-sm-12 mx-auto">
+
         <!-- FILTERS CARD -->
-        <div class="card" style="width: 100%;">
+        <div id="filters" class="card dropShadow"">
             <div class="card-body">
+
                 <!-- TITLE -->
-                <h5 class="card-title">Shop by Category</h5>
-                <hr>
-                <!-- CATEGORIES -->
-                <div><a id="categoryLink" href="#" class="card-link">All Products</a></div>
-                <div><a id="categoryLink" href="#" class="card-link">Category</a></div>
-                <div><a id="categoryLink" href="#" class="card-link">Category</a></div>
-                <div><a id="categoryLink" href="#" class="card-link">Category</a></div>
-                <div><a id="categoryLink" href="#" class="card-link">Category</a></div>
-                <div><a id="categoryLink" href="#" class="card-link">Category</a></div>
-                <div><a id="categoryLink" href="#" class="card-link">Category</a></div>
-                <div><a id="categoryLink" href="#" class="card-link">Category</a></div>
+                <p class="card-title">Shop by Category</p><hr>
+
+                <!-- DYNAMIC CATEGORIES LOADER-->
+                <% categories.forEach(function(category){ %>
+            
+                    <!-- DYNAMIC CATEGORIES -->
+                    <div><a href="" id="categoryLink">
+                        <%= category.name %>
+                    </a></div>
+
+                <% }); %>
+
             </div>
         </div>
+
     </div>
 
     <!-- PRODUCTS COLUMN -->
-    <div class="col-lg-9 col-sm-10 mx-auto">
+    <div class="col-lg-9 col-sm-12 mx-auto">
 
         <!-- FILTER DISPLAY ROW -->
         <div class="row">
             <div class="col">
-                <h5 id="filterDisplay">All Products</h5>
+
+                <!-- FILTER DISPLAY -->
+                <h5 class="textShadow" id="filterDisplay">All Products</h5>
+
             </div>
         </div>
 
         <!-- PRODUCT CARDS ROW -->
         <div class="row">
+
+            <!-- DYNAMIC PRODUCT CARDS LOADER -->
             <% products.forEach(function(product){ %>
-                <!-- COLUMN -->
                 <div class="col-lg-3 col-md-6">
-                    <!-- PRODUCT CARD -->
-                    <div class="card productCard hvr-float">
-                        <!-- IMAGE -->
-                        <img class="card-img-top" src="<%= product.image %>">
-                        <!-- BODY -->
-                        <div class="card-body">
-                            <!-- TITLE -->
-                            <h5 class="card-title"><%= product.name %></h5>
-                            <!-- TITLE -->
-                            <h5 class="card-price"><%= product.price %></h5>
-                        </div>
-                    </div>    
+
+                    <!-- DYNAMIC PRODUCT CARDS -->
+                    <a href="/product" action="/product" method="get">
+                        <div id="productCard" class="card dropShadow hvr-float">
+
+                            <!-- IMAGE -->
+                            <img class="card-img-top" src="<%= product.image %>">
+
+                            <!-- BODY -->
+                            <div class="card-body">
+
+                                <!-- TITLE -->
+                                <p id="cardTitle"><strong><%= product.name %></strong></p>
+
+                                <!-- PRICE -->
+                                <p id="cardPrice"><%= product.price %><% product.salePrice %></p>
+
+                            </div>
+
+                        </div>    
+                    </a>
+
                 </div>
             <% }); %>
-        </div>
-    </div>
 
+        </div>
+
+    </div>
 
 </div>
 

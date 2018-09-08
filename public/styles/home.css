@@ -1,10 +1,11 @@
-#homeContainer {
-    padding: 0 8%;
-    padding-top: 60px;
+#featProductImage {
+    padding: 0;
+    margin-bottom: 25px;
 }
 
-#featProductImage {
-    margin-bottom: 25px;
+#jumbotronColumn {
+    margin: 0;
+    padding: 0;
 }
 
 #psymJumbo {

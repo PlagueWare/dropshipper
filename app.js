@@ -13,60 +13,85 @@ app.use(express.static("public"));
 // ASSUME EJS FILE EXTENSION
 app.set("view engine", "ejs");
 
+var products = [
+    {id: "1", name: "A Test", price: "$100.00", image: "images/box.jpg"},
+    {id: "2", name: "B Test", price: "$100.00", image: "images/box.jpg"},
+    {id: "3", name: "C Test", price: "$100.00", image: "images/box.jpg"},
+    {id: "4", name: "D Test", price: "$100.00", image: "images/box.jpg"},
+    {id: "5", name: "E Test", price: "$100.00", image: "images/box.jpg"},
+    {id: "6", name: "F Test", price: "$100.00", image: "images/box.jpg"},
+    {id: "7", name: "G Test", price: "$100.00", image: "images/box.jpg"},
+    {id: "8", name: "H Test", price: "$100.00", image: "images/box.jpg"},       
+]
+
+var categories = [
+    {name: "All Products"},
+    {name: "Category A"},
+    {name: "Category B"},
+    {name: "Category C"},
+    {name: "Category D"},
+    {name: "Category E"},
+    {name: "Category F"},
+    {name: "Category G"}
+]
+
+var users = [
+    {name: "Robert Ware", email: "plaguemachine@live.com", passwword: "rware952477", type: "admin"}
+]
+
 // ROUTES
+
 app.get("/", function (req, res) {
     res.render("home");
 });
 
+// PRODUCTS
 app.get("/featuredProduct", function (req, res) {
     res.render("featuredProduct");
 });
 
 app.get("/products", function (req, res) {
-    var products = [
-        {"name": "A Test", "price": "$100.00", "image": "images/placeholder.png"},
-        {"name": "B Test", "price": "$100.00", "image": "images/placeholder.png"},
-        {"name": "C Test", "price": "$100.00", "image": "images/placeholder.png"},
-        {"name": "D Test", "price": "$100.00", "image": "images/placeholder.png"},
-        {"name": "E Test", "price": "$100.00", "image": "images/placeholder.png"},
-        {"name": "F Test", "price": "$100.00", "image": "images/placeholder.png"},
-        {"name": "G Test", "price": "$100.00", "image": "images/placeholder.png"},
-        {"name": "H Test", "price": "$100.00", "image": "images/placeholder.png"},       
-    ]
-    res.render("products", {products:products});
+    res.render("products", {products: products, categories: categories});
 });
 
-app.post("/products", function (req, res) {
-    res.render("products");
-});
-
-app.get("/products/filter/:searchTerm", function (req, res) {
-    var searchTerm = req.body.params("searchTerm");
-    res.render("products", {products:products});
-});
-
-app.get("/products/:productID", function (req, res) {
-    var productID = req.params.productID;
+// PRODUCT
+app.get("/product", function (req, res) {
     res.render("product");
 });
 
+// LOGIN
 app.get("/login", function (req, res) {
     res.render("login");
 });
 
+app.post("/login", function (req, res) {
+    res.render("login");
+});
+
+// SIGN UP
 app.get("/signup", function (req, res) {
     res.render("signup");
 });
 
-app.get("/user/:userID", function (req, res) {
-    var userID = req.params.userID;
-    res.render("user");
+app.post("/signup", function (req, res) {
+    var nameField = req.body.nameField;
+    var emailField = req.body.emailField;
+    var pwField = req.body.pwField;
+    var pwcField = req.body.pwcField;
+    if (pwcField == pwField){
+        var newUser = {name: nameField, email: emailField, password: pwField, type: "user"};
+        users.push(newUser);
+        console.log(users);
+        res.render("login");
+    }
 });
 
+// CART
 app.get("/cart", function (req, res) {
     res.render("cart");
 });
 
+// CATCH ALL BAD ROUTES
 app.get("*", function (req, res) {
     res.render("notFound");
 })
