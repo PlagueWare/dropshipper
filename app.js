@@ -54,6 +54,10 @@ app.get("/products", function (req, res) {
     res.render("products", {products: products, categories: categories});
 });
 
+app.get("/products/category/:categoryID", function (req, res) {
+    res.render("products");
+});
+
 // PRODUCT
 app.get("/product", function (req, res) {
     res.render("product");
