@@ -1,15 +1,47 @@
-// INCLUDE EXPRESS
-var express = require("express");
-// EXECUTE EXPRESS
-var app = express();
-// INCLUDE BODY PARSER
-var bodyParser = require("body-parser");
-// USE BODY PARSER
-app.use(bodyParser.urlencoded({extended: true}));
-// USE REQUEST
-var request = require("request");
-// SERVE PUBLIC FOLDER
+// INCLUDES
+var express     = require("express"),
+    app         = express(),
+    bodyParser  = require("body-parser"),
+    request     = require("request"),
+    mongoose    = require ("mongoose");
+
+// CONNECT TO MONGODB ATLAS CLUSTER
+mongoose.connect("mongodb+srv://plagueware:Rware952477.@cluster0-mazmq.mongodb.net/users?retryWrites=true", {useNewUrlParser:true});
+mongoose.connect("mongodb+srv://plagueware:Rware952477.@cluster0-mazmq.mongodb.net/products?retryWrites=true", {useNewUrlParser:true});
+
+// MONGODB SCHEMAS
+var userSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    password: String
+}),
+    productSchema = new mongoose.Schema({
+    name: String,
+    image: String,
+    price: Number
+});
+
+// MONGOOSE MODELS
+var User = mongoose.model("User", userSchema),
+    Product = mongoose.model("Product", userSchema);
+
+User.create({
+    name: "Robert Ware", 
+    email: "plaguemachine@live.com", 
+    password: "Rware952477."
+}, function (err, user){
+    if(err){
+        console.log(err);
+    } else {
+        console.log("New User Created.");
+        console.log(user);
+    }
+});
+
+// SERVE FOLDERS
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended: true}));
+
 // ASSUME EJS FILE EXTENSION
 app.set("view engine", "ejs");
 
