@@ -15,14 +15,21 @@
                 <p class="card-title">Shop by Category</p><hr>
 
                 <!-- DYNAMIC CATEGORIES LOADER-->
-                <% categories.forEach(function(category){ %>
+                <% // categories.forEach(function(category){ %>
             
                     <!-- DYNAMIC CATEGORIES -->
-                    <div><a href="" id="categoryLink">
-                        <%= category.name %>
-                    </a></div>
+                    <div>               
+                        <a href="products" id="categoryLink">
+                            All Products
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" id="categoryLink">
+                            <%= // category.name %>
+                        </a>
+                    </div>
 
-                <% }); %>
+                <% // }); %>
 
             </div>
         </div>
@@ -44,6 +51,9 @@
 
         <!-- PRODUCT CARDS ROW -->
         <div class="row">
+
+            <!-- NEW PRODUCT CARD -->
+            <%  %>
 
             <!-- DYNAMIC PRODUCT CARDS LOADER -->
             <% products.forEach(function(product){ %>

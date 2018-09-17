@@ -8,35 +8,30 @@ var express     = require("express"),
 // CONNECT TO MONGODB ATLAS CLUSTER
 mongoose.connect("mongodb+srv://plagueware:Rware952477.@cluster0-mazmq.mongodb.net/users?retryWrites=true", {useNewUrlParser:true});
 mongoose.connect("mongodb+srv://plagueware:Rware952477.@cluster0-mazmq.mongodb.net/products?retryWrites=true", {useNewUrlParser:true});
+mongoose.connect("mongodb+srv://plagueware:Rware952477.@cluster0-mazmq.mongodb.net/categories?retryWrites=true", {useNewUrlParser:true});
 
 // MONGODB SCHEMAS
 var userSchema = new mongoose.Schema({
     name: String,
     email: String,
-    password: String
+    password: String, 
+    type: String
 }),
-    productSchema = new mongoose.Schema({
+    productsSchema = new mongoose.Schema({
     name: String,
     image: String,
     price: Number
+}),
+    categoriesSchema = new mongoose.Schema({
+    name: String
 });
 
 // MONGOOSE MODELS
-var User = mongoose.model("User", userSchema),
-    Product = mongoose.model("Product", userSchema);
+var Users       = mongoose.model("Users", userSchema),
+    Products    = mongoose.model("Products", productsSchema),
+    Categories  = mongoose.model("Categories", categoriesSchema);
 
-User.create({
-    name: "Robert Ware", 
-    email: "plaguemachine@live.com", 
-    password: "Rware952477."
-}, function (err, user){
-    if(err){
-        console.log(err);
-    } else {
-        console.log("New User Created.");
-        console.log(user);
-    }
-});
+Products.create();
 
 // SERVE FOLDERS
 app.use(express.static("public"));
@@ -45,48 +40,39 @@ app.use(bodyParser.urlencoded({extended: true}));
 // ASSUME EJS FILE EXTENSION
 app.set("view engine", "ejs");
 
-var products = [
-    {id: "1", name: "A Test", price: "$100.00", image: "images/box.jpg"},
-    {id: "2", name: "B Test", price: "$100.00", image: "images/box.jpg"},
-    {id: "3", name: "C Test", price: "$100.00", image: "images/box.jpg"},
-    {id: "4", name: "D Test", price: "$100.00", image: "images/box.jpg"},
-    {id: "5", name: "E Test", price: "$100.00", image: "images/box.jpg"},
-    {id: "6", name: "F Test", price: "$100.00", image: "images/box.jpg"},
-    {id: "7", name: "G Test", price: "$100.00", image: "images/box.jpg"},
-    {id: "8", name: "H Test", price: "$100.00", image: "images/box.jpg"},       
-]
-
-var categories = [
-    {name: "All Products"},
-    {name: "Category A"},
-    {name: "Category B"},
-    {name: "Category C"},
-    {name: "Category D"},
-    {name: "Category E"},
-    {name: "Category F"},
-    {name: "Category G"}
-]
-
-var users = [
-    {name: "Robert Ware", email: "plaguemachine@live.com", passwword: "rware952477", type: "admin"}
-]
-
 // ROUTES
-
 app.get("/", function (req, res) {
     res.render("home");
 });
 
-// PRODUCTS
+// FEATURED PRODUCT
 app.get("/featuredProduct", function (req, res) {
     res.render("featuredProduct");
 });
 
+// PRODUCTS
 app.get("/products", function (req, res) {
-    res.render("products", {products: products, categories: categories});
+    Products.find({}, function(err, products){
+        if(err) {
+            console.log(err);
+        } else {
+            res.render("products", {products: products});
+        }
+    });
 });
 
-app.get("/products/category/:categoryID", function (req, res) {
+app.post("/products", function(req, res){
+    var name = req.body.name;
+    var image = req.body.image;
+    var price = req.body.price;
+    var newProduct = {name: name, image: image, price: price};
+    Products.create(newProduct, function(err, product){
+        if (err) {
+            console.log(err);            
+        } else {
+            console.log(product);
+        }
+    })
     res.render("products");
 });
 
@@ -101,7 +87,9 @@ app.get("/login", function (req, res) {
 });
 
 app.post("/login", function (req, res) {
-    res.render("login");
+    var user = req.body.userField;
+    var password = req.body.passwordField;
+    res.render("home");
 });
 
 // SIGN UP
@@ -116,9 +104,13 @@ app.post("/signup", function (req, res) {
     var pwcField = req.body.pwcField;
     if (pwcField == pwField){
         var newUser = {name: nameField, email: emailField, password: pwField, type: "user"};
-        users.push(newUser);
-        console.log(users);
-        res.render("login");
+        Users.create(newUser, function(err, user){
+            if(err){
+                console.log(err);
+            } else {
+                res.redirect("login");
+            }
+        });
     }
 });
 
